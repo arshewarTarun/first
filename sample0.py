@@ -8,7 +8,7 @@ try:
         .getOrCreate()
 
     # S3 paths
-    input_path = "s3a://j-and-j-test-bucket/target_combined_new/part-00000-ce9be0cc-25d3-470b-9745-19c501275b30-c000.snappy.parquet"
+    input_path = "s3a://cdpmodakbucket/testing_labcorp_5.parquet/part-00000-2a121ece-f064-430a-886a-58f4a9f96174-c000.snappy.parquet"
     output_path = "s3a://j-and-j-test-bucket/target_combined_new_up"
 
     # Read Parquet file
@@ -22,7 +22,7 @@ try:
 
     # Write to output path
     print(f"Writing to: {output_path}")
-    df.write.mode("overwrite").parquet(output_path)
+    #df.write.mode("overwrite").parquet(output_path)
     print("Write operation completed successfully.")
 
 except Exception as e:
