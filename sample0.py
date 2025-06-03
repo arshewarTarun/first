@@ -8,22 +8,14 @@ try:
         .getOrCreate()
 
     # S3 paths
-    input_path = "s3a://cdpmodakbucket/testing_labcorp_5.parquet/part-00000-2a121ece-f064-430a-886a-58f4a9f96174-c000.snappy.parquet"
-    output_path = "s3a://j-and-j-test-bucket/target_combined_new_up"
+    input_path = "s3a://cdpmodakbucket/ta22_test/ab1_all_datatypes.csv"
+    #output_path = "s3a://j-and-j-test-bucket/target_combined_new_up"
 
     # Read Parquet file
     print(f"Reading from: {input_path}")
-    df = spark.read.parquet(input_path)
+    df = spark.read.csv(input_path)
 
-    # Show the DataFrame
-    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    df.show()
-    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-    # Write to output path
-    print(f"Writing to: {output_path}")
-    #df.write.mode("overwrite").parquet(output_path)
-    print("Write operation completed successfully.")
 
 except Exception as e:
     print(f"An error occurred: {str(e)}")
