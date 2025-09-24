@@ -14,6 +14,7 @@ try:
     # Read Parquet file
     print(f"Reading from: {input_path}")
     df = spark.read.csv(input_path)
+    df.show()
 
 
 
