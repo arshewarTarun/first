@@ -8,7 +8,7 @@ try:
         .getOrCreate()
 
     # S3 paths
-    input_path = "s3a://cdpmodakbucket/ta22_test/COLUMN.csv"
+    input_path = "s3://cdpmodakbucket/ta22_test/COLUMN.csv"
     #output_path = "s3a://j-and-j-test-bucket/target_combined_new_up"
 
     # Read Parquet file
